@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+torch
+sentence-transformers
+transformers
+tqdm
+pinecone-client
+unstructured
+python-multipart
+requests
