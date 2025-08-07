@@ -3,10 +3,11 @@ uvicorn
 pydantic
 requests
 torch
-pinecone==3.0.0
+pinecone==7.3.0
 pdfminer.six
 unstructured
 tqdm
 sentence-transformers
+
 
 
