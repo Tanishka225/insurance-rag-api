@@ -1,13 +1,12 @@
-fastapi
-uvicorn
-pydantic
-requests
-torch
-pinecone==7.3.0
-pdfminer.six
-unstructured
+
+transformers==4.41.2
+sentence-transformers==2.6.1
+torch==2.3.0
 tqdm
-sentence-transformers
+pinecone-client==3.1.0
+fastapi
+uvicorn[standard]
+
 
 
 
