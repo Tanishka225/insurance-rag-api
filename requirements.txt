@@ -1,6 +1,6 @@
 
 pymupdf==1.26.3
-pandas==2.2.2
+pandas
 tqdm==4.67.1
 unstructured[all-docs]==0.18.11
 sentence-transformers==2.6.1
@@ -12,6 +12,7 @@ uvicorn==0.22.0
 python-dotenv==0.21.1
 pydantic==2.5.2
 requests==2.32.3
+
 
 
 
