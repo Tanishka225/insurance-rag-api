@@ -15,9 +15,6 @@ from getpass import getpass
 app = FastAPI()
 
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
-if not pinecone_api_key:
-    pinecone_api_key = getpass("Enter your Pinecone API Key: ")
-
 
 rag = SimpleRAGPipeline(pinecone_api_key=pinecone_api_key, index_name="finserv-rag")
 
