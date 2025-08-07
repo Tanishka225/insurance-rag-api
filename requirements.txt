@@ -1,11 +1,17 @@
-unstructured[all-docs]
-transformers==4.41.2
+
+pymupdf==1.26.3
+pandas==2.2.2
+tqdm==4.67.1
+unstructured[all-docs]==0.18.11
 sentence-transformers==2.6.1
-torch==2.8.0
-tqdm
 pinecone-client==3.1.0
-fastapi
-uvicorn[standard]
+transformers==4.40.1
+torch==2.3.0
+fastapi==0.111.0
+uvicorn==0.22.0
+python-dotenv==0.21.1
+pydantic==2.5.2
+requests==2.32.3
 
 
 
