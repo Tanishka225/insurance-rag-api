@@ -11,16 +11,14 @@ from parser_pipeline import smart_extract, clean_text, chunk_clauses, create_rag
 
 import torch
 
-# Initialize FastAPI
-app = FastAPI()
+import os
 
-print("Enter your Pinecone API Key:")
-pinecone_api_key = getpass("Pinecone API Key: ")
+PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
 
 print("API key configured!")
 
 
-rag = SimpleRAGPipeline(pinecone_api_key=pinecone_api_key, index_name="finserv-rag")
+rag = SimpleRAGPipeline(PINECONE_API_KEY=PINECONE_API_KEY, index_name="finserv-rag")
 
 
 # Request schema
