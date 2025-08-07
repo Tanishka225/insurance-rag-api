@@ -10,14 +10,13 @@ from model_rag import SimpleRAGPipeline, assign_unique_ids
 from parser_pipeline import smart_extract, clean_text, chunk_clauses, create_rag_chunks
 
 import torch
+from getpass import getpass
 
-# Initialize FastAPI
 app = FastAPI()
 
-print("Enter your Pinecone API Key:")
-pinecone_api_key = getpass("Pinecone API Key: ")
-
-print("API key configured!")
+pinecone_api_key = os.getenv("PINECONE_API_KEY")
+if not pinecone_api_key:
+    pinecone_api_key = getpass("Enter your Pinecone API Key: ")
 
 
 rag = SimpleRAGPipeline(pinecone_api_key=pinecone_api_key, index_name="finserv-rag")
