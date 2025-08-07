@@ -11,9 +11,9 @@ from getpass import getpass
 from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone, ServerlessSpec
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, T5ForConditionalGeneration
+from getpass import getpass
 import os
-api_key = os.getenv("PINECONE_API_KEY")
-
+pinecone_api_key = os.getenv("PINECONE_API_KEY")
 
 def assign_unique_ids(chunks: List[Dict], namespace: str = "default") -> List[Dict]:
     id_set = set()
@@ -193,7 +193,7 @@ class SimpleRAGPipeline:
 
 def setup_rag_system():
     rag = SimpleRAGPipeline(
-        pinecone_api_key=PINECONE_API_KEY,
+        pinecone_api_key=pinecone_api_key,
         index_name="finserv-rag-system"
     )
     return rag
