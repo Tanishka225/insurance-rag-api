@@ -4,7 +4,8 @@ torch
 sentence-transformers
 transformers
 tqdm
-pinecone-client
+pinecone
 unstructured
 python-multipart
+
 requests
