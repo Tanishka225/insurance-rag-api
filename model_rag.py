@@ -11,10 +11,9 @@ from getpass import getpass
 from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone, ServerlessSpec
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, T5ForConditionalGeneration
+import os
 
-print("Enter your Pinecone API Key:")
-PINECONE_API_KEY = getpass("Pinecone API Key: ")
-print("API key configured!")
+PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
 
 def assign_unique_ids(chunks: List[Dict], namespace: str = "default") -> List[Dict]:
     id_set = set()
